@@ -11,6 +11,7 @@
 #include "Vsop.h"
 #include "VsopData.cpp"
 #include "AstroOps.h"
+#include <math.h>
 
 /*
  * This function, using the simplified VSOP87 data in Meeus, can compute
