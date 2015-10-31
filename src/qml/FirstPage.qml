@@ -1,3 +1,10 @@
+/***************************************************************************
+
+    FirstPage.qml - Daybreak, A Sun and Moon rise and set calculator
+    Copyright 2015 Reto Zingg <g.d0b3rm4n@gmail.com>
+
+ ***************************************************************************/
+
 /*
   Copyright (C) 2013 Jolla Ltd.
   Contact: Thomas Perl <thomas.perl@jollamobile.com>
@@ -34,6 +41,10 @@ import Sailfish.Silica 1.0
 
 Page {
     id: page
+    property var date
+    property int latitude
+    property int longitude
+
 
     // To enable PullDownMenu, place our content in a SilicaFlickable
     SilicaFlickable {
@@ -42,9 +53,26 @@ Page {
         // PullDownMenu and PushUpMenu must be declared in SilicaFlickable, SilicaListView or SilicaGridView
         PullDownMenu {
             MenuItem {
-                text: qsTr("Show Page 2")
-                onClicked: pageStack.push(Qt.resolvedUrl("SecondPage.qml"))
+                text: "About"
+                onClicked: {
+//                    console.log("Clicked option About")
+                    pageStack.push(Qt.resolvedUrl("about.qml"))
+                }
             }
+            MenuItem {
+                text: "Help"
+                onClicked: {
+//                    console.log("Clicked option Help")
+                    pageStack.push(Qt.resolvedUrl("help.qml"))
+                }
+            }
+//            MenuItem {
+//                text: "Settings"
+//                onClicked: {
+//                    console.log("Clicked option Settings")
+//                    pageStack.push(Qt.resolvedUrl("settings.qml"))
+//                }
+//            }
         }
 
         // Tell SilicaFlickable the height of its content.
@@ -84,13 +112,12 @@ Page {
                 property date selectedDate
 
                 function openDateDialog() {
-                    var dialog = pageStack.push("Sailfish.Silica.DatePickerDialog", {
-                                                    date: selectedDate
-                                                })
+                    var dialog = pageStack.push("SearchPage.qml")
 
                     dialog.accepted.connect(function() {
-                        value = dialog.dateText
-                        selectedDate = dialog.date
+                        console.log("dialog name: " + dialog.name)
+                        console.log("dialog lat: " + dialog.latitude)
+                        console.log("dialog lon: " + dialog.longitude)
                     })
                 }
 
