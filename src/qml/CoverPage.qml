@@ -1,3 +1,9 @@
+/***************************************************************************
+
+    CoverPage.qml - Daybreak, A Sun and Moon rise and set calculator
+
+ ***************************************************************************/
+
 /*
   Copyright (C) 2013 Jolla Ltd.
   Contact: Thomas Perl <thomas.perl@jollamobile.com>
