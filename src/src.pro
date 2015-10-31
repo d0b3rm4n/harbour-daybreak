@@ -11,8 +11,8 @@ geonames.target = geonames
 
 SUBDIRS = main astrocpp geonames
 
-OTHER_FILES += qml/*.qml
+OTHER_FILES += qml/*.qml qml/*.js
 
-qmlfiles.files = qml/*.qml
+qmlfiles.files = qml/*.qml qml/*.js
 qmlfiles.path = /usr/share/harbour-daybreak/qml
 INSTALLS += qmlfiles
