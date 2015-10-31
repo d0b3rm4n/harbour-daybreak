@@ -1,0 +1,2 @@
+module harbour.querymee.GeoNames
+plugin qmlgeonamesplugin ../../../
