@@ -1,3 +1,10 @@
+/***************************************************************************
+
+    habrbour-daybreak.qml - Daybreak, A Sun and Moon rise and set calculator
+    Copyright 2015 Reto Zingg <g.d0b3rm4n@gmail.com>
+
+ ***************************************************************************/
+
 /*
   Copyright (C) 2013 Jolla Ltd.
   Contact: Thomas Perl <thomas.perl@jollamobile.com>
