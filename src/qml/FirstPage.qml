@@ -41,7 +41,7 @@ import Sailfish.Silica 1.0
 
 Page {
     id: page
-    property var date
+    property date date: new Date()
     property int latitude
     property int longitude
 
@@ -89,21 +89,20 @@ Page {
                 title: qsTr("Daybreak")
             }
             ValueButton {
-                property date selectedDate
+//                property date selectedDate: Date.now()
 
                 function openDateDialog() {
                     var dialog = pageStack.push("Sailfish.Silica.DatePickerDialog", {
-                                                    date: selectedDate
+                                                    date: page.date
                                                 })
 
                     dialog.accepted.connect(function() {
-                        value = dialog.dateText
-                        selectedDate = dialog.date
+                        page.date = dialog.date
                     })
                 }
 
-                label: "Date"
-                value: qsTr("Select")
+                label: qsTr("Date")
+                value: page.date.toLocaleDateString()
                 width: parent.width
                 onClicked: openDateDialog()
             }
@@ -118,6 +117,10 @@ Page {
                         console.log("dialog name: " + dialog.name)
                         console.log("dialog lat: " + dialog.latitude)
                         console.log("dialog lon: " + dialog.longitude)
+
+                        value = dialog.name
+                        page.latitude = dialog.latitude
+                        page.longitude = dialog.longitude
                     })
                 }
 
