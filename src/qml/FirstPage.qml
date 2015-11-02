@@ -37,13 +37,14 @@
 
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import harbour.daybreak.Astro 1.0
 
 
 Page {
     id: page
     property date date: new Date()
-    property int latitude
-    property int longitude
+    property double latitude
+    property double longitude
 
 
     // To enable PullDownMenu, place our content in a SilicaFlickable
@@ -121,6 +122,11 @@ Page {
                         value = dialog.name
                         page.latitude = dialog.latitude
                         page.longitude = dialog.longitude
+
+                        Astro.getMoonRise(page.date, page.latitude, page.longitude)
+                        Astro.getMoonSet(page.date, page.latitude, page.longitude)
+                        Astro.getSunRise(page.date, page.latitude, page.longitude)
+                        Astro.getSunSet(page.date, page.latitude, page.longitude)
                     })
                 }
 

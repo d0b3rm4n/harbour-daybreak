@@ -5,9 +5,16 @@ INCLUDEPATH += .
 
 #LIBS += -lmath
 
+INSTALLS += target
+target.path = /usr/share/harbour-daybreak/lib
+
+QMAKE_CXXFLAGS = -ffast-math
+
+QT -= gui core
+
 # Input
 HEADERS += AstroOps.h \
-           ConfigFile.h \
+#           ConfigFile.h \
            DateOps.h \
            Lunar.h \
            LunarTerms.h \
@@ -19,7 +26,7 @@ HEADERS += AstroOps.h \
            VisLimit.h \
            Vsop.h
 SOURCES += AstroOps.cpp \
-           ConfigFile.cpp \
+#           ConfigFile.cpp \
            DateOps.cpp \
            DateOpsIntl.cpp \
            Lunar.cpp \
@@ -27,7 +34,7 @@ SOURCES += AstroOps.cpp \
            PlanetData.cpp \
            Pluto.cpp \
            RiseSet.cpp \
-           test.cpp \
+#           test.cpp \
            VisLimit.cpp \
            Vsop.cpp \
            VsopData.cpp

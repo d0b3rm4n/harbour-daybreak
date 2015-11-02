@@ -9,7 +9,11 @@ astrocpp.target = astrocpp
 geonames.subdir = geonames
 geonames.target = geonames
 
-SUBDIRS = main astrocpp geonames
+astro.subdir = astro
+astro.target = astro
+astro.depends = astrocpp
+
+SUBDIRS = main astro astrocpp geonames
 
 OTHER_FILES += qml/*.qml qml/*.js
 

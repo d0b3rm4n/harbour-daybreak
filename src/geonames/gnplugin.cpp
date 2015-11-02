@@ -19,14 +19,15 @@
 class GnPlugin : public QQmlExtensionPlugin
 {
     Q_OBJECT
-    Q_PLUGIN_METADATA(IID "org.qt-project.Qt.QQmlExtensionInterface" FILE "qmlplugin.json")
+    Q_PLUGIN_METADATA(IID "harbour.daybreak.GeoNames")
 public:
     void registerTypes(const char *uri);
 };
 
 void GnPlugin::registerTypes(const char *uri)
 {
-    Q_ASSERT(uri == QLatin1String("harbour.querymee.GeoNames"));
+    // @uri harbour.daybreak.GeoNames
+//    Q_ASSERT(uri == QLatin1String("harbour.daybreak.GeoNames"));
     // qmlRegisterType<QueryMee>(uri, 1, 0, "QueryMee");
 }
 

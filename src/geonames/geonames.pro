@@ -1,13 +1,14 @@
 TEMPLATE = lib
 CONFIG += qt plugin hide_symbols
 QT += qml
+QT -= gui
 
 TARGET = qmlgeonamesplugin
 INSTALLS += target qmldir
 
 target.path = /usr/share/harbour-daybreak/lib
 
-qmldir.path +=  $$target.path/harbour/daybreak/GeoNames
+qmldir.path +=  /usr/share/harbour-daybreak/harbour/daybreak/GeoNames
 qmldir.files = qmldir
 
 CONFIG(release, debug|release) {

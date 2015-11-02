@@ -1,2 +1,2 @@
-module harbour.querymee.GeoNames
-plugin qmlgeonamesplugin ../../../
+module harbour.daybreak.GeoNames
+plugin qmlgeonamesplugin ../../../lib/
