@@ -1,0 +1,2 @@
+module harbour.daybreak.Astro
+plugin qmlastroplugin ../../../lib/
